@@ -14,7 +14,6 @@ function App() {
     if (count < 9) {
       if (wordList[count].pos === checked) {
         setScore((prev) => prev + 1);
-        console.log("true");
       }
       setCount((prev) => prev + 1);
     } else {
@@ -56,6 +55,7 @@ function App() {
     <div className="App">
       <main>
         {/* <h1>{qs.word}</h1> */}
+        <h2 style={{ color: "#fff" }}>{count + 1} Question from 10</h2>
         <h1>{wordList[count]?.word}</h1>
         <form onSubmit={onSubmit}>
           <div className="inputs">
